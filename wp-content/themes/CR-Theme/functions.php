@@ -1,6 +1,5 @@
 <?php 
 
-
 function codefactory_files(){
 
 //register jQuery
@@ -17,5 +16,19 @@ wp_enqueue_style('my-style-sheet', get_template_directory_uri().'/style.css');
 
 //add the action of calling codefactory_files when the scripts are loaded
 add_action('wp_enqueue_scripts', 'codefactory_files');
+
+/**
+* Register Custom Navigation Walker
+*/
+function register_navwalker(){
+
+    // register the navwalker file
+    require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+    register_nav_menus( array(
+'primary' => __( 'Top-Menu'),
+) );
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 ?>
