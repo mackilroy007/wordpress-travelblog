@@ -16,14 +16,14 @@
                     <?php the_post_thumbnail(); ?>
                 <?php endif; ?>
                 <!--retrieves URL for the permalink-->
-                <h1> <?php the_title(); ?></h1>
+                <h1 class="mt-2"> <?php the_title(); ?></h1>
                 <!--retrieves blog title-->
             </a>
 
             <p><?php the_time('F j, Y g:i a'); ?></p>
             <!--retrieves date blog entry was created-->
 
-            <p> <?php the_author(); ?></p>
+            <p> <?php #the_author(); ?></p>
             <!--retrieves author of blog entry-->
 
             <?php #the_content(); 

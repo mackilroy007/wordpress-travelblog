@@ -39,7 +39,4 @@ function set_excerpt_length(){
 }
 add_filter('excerpt_length','set_excerpt_length');
 
-// add post image thumbnail
-add_theme_support('post-thumbnails');
-
 ?>
