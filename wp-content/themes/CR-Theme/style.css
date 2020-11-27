@@ -16,6 +16,10 @@ Tags: responsive, exciting, compatible, not unique
     width: 100%;
 }
 
+.car{
+    height: 40em;
+}
+
 a{
     color: black;
 }
