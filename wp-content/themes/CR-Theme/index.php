@@ -1,18 +1,22 @@
 <?php get_header(); ?>
 
 
-<div class="content">
+<div class="content container">
 
-    <h1>Hello from my theme (HOME) </h1>
-
+    <h1>Index.php </h1>
+    <br>
     <?php if (have_posts()) : ?>
         <!--  If there are posts available  -->
 
         <?php while (have_posts()) : the_post(); ?>
             <!-- if there are posts, iterate the posts in the loop-->
             <a href="<?php the_permalink(); ?>">
+                <!-- add thumbnail with a href -->
+                <?php if (has_post_thumbnail()) : ?>
+                    <?php the_post_thumbnail(); ?>
+                <?php endif; ?>
                 <!--retrieves URL for the permalink-->
-                <?php the_title(); ?>
+                <h1> <?php the_title(); ?></h1>
                 <!--retrieves blog title-->
             </a>
 
@@ -22,9 +26,14 @@
             <p> <?php the_author(); ?></p>
             <!--retrieves author of blog entry-->
 
-            <?php the_content(); ?>
+            <?php #the_content(); 
+            ?>
             <!--retrieves content-->
 
+            <?php the_excerpt(); ?>
+            <!--retrieves excerpt-->
+            <br>
+            <br>
         <?php endwhile; ?>
         <!--end the while loop-->
 

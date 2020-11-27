@@ -8,6 +8,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
    <meta name="description" content="<?php bloginfo('description'); ?>">
+   <!-- stylesheet link -->
+   <link rel="stylesheet" href="style.css">
    <!--displays the Tagline in Settings->General -->
    <title>
        <?php bloginfo('name'); ?>

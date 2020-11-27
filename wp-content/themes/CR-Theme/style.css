@@ -11,3 +11,16 @@ Text Domain: CodeFactory
 Tags: responsive, exciting, compatible, not unique
 */
 
+.wp-post-image{
+    height: 25%;
+    width: 100%;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+}

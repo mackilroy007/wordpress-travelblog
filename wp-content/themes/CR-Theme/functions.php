@@ -31,4 +31,15 @@ function register_navwalker(){
 }
 add_action( 'after_setup_theme', 'register_navwalker' );
 
+/**
+ * Setting the excerpt length
+ */
+function set_excerpt_length(){
+    return 108; //the number of words you want displayed
+}
+add_filter('excerpt_length','set_excerpt_length');
+
+// add post image thumbnail
+add_theme_support('post-thumbnails');
+
 ?>

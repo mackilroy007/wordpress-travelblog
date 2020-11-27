@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="container">
-    <h1>Hello from a single post</h1>
+    <h1>single.php</h1>
 
 
     <?php if (have_posts()) : ?>
@@ -10,21 +10,19 @@
         <?php while (have_posts()) : the_post(); ?>
             <!-- if there are posts, iterate the posts in the loop-->
 
-            <?php the_title(); ?>
+            <h1><?php the_title(); ?></h1>
             <!--retrieves blog title-->
 
+            <?php the_content(); ?>
+            <!--retrieves content-->
+            
+            <br>
+            <hr>
             <p><?php the_time('F j, Y g:i a'); ?></p>
             <!--retrieves date blog entry was created-->
 
-            <p> <?php the_author(); ?></p>
-            <!--retrieves author of blog entry-->
-
-            <?php #the_content(); ?>
-            <!--retrieves content-->
-
-            <?php the_excerpt(); ?>
-            <!--retrieves excerpt-->
-
+            <!-- <p> <?php #the_author(); ?></p>
+            retrieves author of blog entry -->
         <?php endwhile; ?>
         <!--end the while loop-->
 
