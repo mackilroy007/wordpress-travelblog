@@ -3,7 +3,7 @@
 
 <div class="content">
 
-    <h1>Hello from my theme</h1>
+    <h1>Hello from my theme (HOME) </h1>
 
     <?php if (have_posts()) : ?>
         <!--  If there are posts available  -->

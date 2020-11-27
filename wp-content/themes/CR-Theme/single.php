@@ -19,8 +19,11 @@
             <p> <?php the_author(); ?></p>
             <!--retrieves author of blog entry-->
 
-            <?php the_content(); ?>
+            <?php #the_content(); ?>
             <!--retrieves content-->
+
+            <?php the_excerpt(); ?>
+            <!--retrieves excerpt-->
 
         <?php endwhile; ?>
         <!--end the while loop-->
