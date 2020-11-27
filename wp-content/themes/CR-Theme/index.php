@@ -3,8 +3,6 @@
 
 <div class="content container">
 
-    <h1>Index.php </h1>
-    <br>
     <?php if (have_posts()) : ?>
         <!--  If there are posts available  -->
 

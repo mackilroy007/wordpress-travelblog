@@ -2,8 +2,6 @@
 
 <div class="container">
 
-    <h1>page.php</h1>
-
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -31,6 +29,14 @@
         </a>
     </div>
 
+    <div class="">
+        <?php
+        if (is_active_sidebar('sidebar')) :
+            dynamic_sidebar('sidebar');
+        endif;
+        ?>
+    </div>
+
     <?php if (have_posts()) : ?>
         <!--  If there are pages available  -->
 
@@ -40,7 +46,8 @@
 
         <?php while (have_posts()) : the_post(); ?>
             <!-- if there are pages, iterate the page in the loop-->
-            <?php the_title(); ?>
+            <?php #the_title(); 
+            ?>
             <!--retrieves page title-->
 
             <?php the_excerpt(); ?>
@@ -52,9 +59,16 @@
     <?php else : ?>
         <!-- if no page is found then: -->
 
-        <p>No page found</p>
+        <!-- <p>No page found</p> -->
     <?php endif; ?>
     <!-- end if -->
+
+    <h2 class="mt-4 text-center">Our mission is to show this beautiful world and share the Joy!</h2>
+    <br>
+    <article class="mt-5 row">
+        <img src="<?php echo get_template_directory_uri(); ?>/img/author.png" alt="author" class="test col-5">
+        <h4 class="col text1">I love to explore the world and share the view, it's culture to it's upmost glory. As an added benifit, I try to make those same trips available by offering different solutions to booking those trips here!</h4>
+    </article>
 </div>
 
 <?php get_footer(); ?>
